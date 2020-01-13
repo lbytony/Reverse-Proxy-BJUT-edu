@@ -45,9 +45,9 @@ rc.local 里面按照顺序是:
 下面是rc.local里相关的内容
 
 
-    sh /home/cjw1115/route/connect.sh           #连接vpn
+    sh /home/admin/route/connect.sh           #连接vpn
     sleep 4s            #确保vpn连接成功，稍微等等
-    sh /home/cjw1115/route/route_add.sh >> /home/cjw1115/route/log_add.txt                  #修改路由表
+    sh /home/admin/route/route_add.sh >> /home/admin/route/log_add.txt                  #修改路由表
     sleep 4s
     ./usr/sbin/nginx            #启动nginx
     ./usr/sbin/nginx -s reload          #以防万一，重新加载一下
