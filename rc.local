@@ -14,10 +14,10 @@
 /usr/bin/vpnd 2>&1
 /usr/bin/vpnd 2>&1
 
-sh /home/admin/route/connect.sh #connect to vpn.bjut.edu.cn
+sh /www/wwwroot/mybjut.liboyan.cn/connect.sh #connect to vpn.bjut.edu.cn
 sleep 4s                            #just wait for connecting to vpn.bjut.edu.cn successfully .
-sh /home/admin/route/route_add.sh >> /home/admin/route/log_add.txt #change the route table,let all of address belong to 172.0.0.0 use ssl-vpn channel.
+sh /www/wwwroot/mybjut.liboyan.cn/route/route_add.sh >> /home/admin/route/log_add.txt #change the route table,let all of address belong to 172.0.0.0 use ssl-vpn channel.
 sleep 4s
-./usr/sbin/nginx  #launch nginx server,for reverse proxy the website gdjwgl.bjut.edu.cn(which ip address is 172.xx.xx.xx in internal network of BJUT.)
-./usr/sbin/nginx -s reload #reload nginx server make sure that there is nothing wrong with our action.
+./www/server/nginx/sbin/nginx  #launch nginx server,for reverse proxy the website gdjwgl.bjut.edu.cn(which ip address is 172.xx.xx.xx in internal network of BJUT.)
+./www/server/nginx/sbin/nginx -s reload #reload nginx server make sure that there is nothing wrong with our action.
 exit 0

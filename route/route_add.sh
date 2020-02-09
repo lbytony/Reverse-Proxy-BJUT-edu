@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "start"
-for ((i = 1; i < 172; i++)); do
-    v=$(/sbin/route add -net "$i".0.0.0 netmask 255.0.0.0 gw 60.205.191.179 dev eth1) #182.92.123.247 is the gateway address of your Virtual-Machine server.
+for ((i = 1; i < 172; i++)) do
+    v=$(/sbin/route add -net "$i".0.0.0 netmask 255.0.0.0 gw 60.205.191.179 dev ens33) #182.92.123.247 is the gateway address of your Virtual-Machine server.
     echo "$v"
 done
 
 for ((i = 173; i < 256; i++)); do
-    v=$(/sbin/route add -net "$i".0.0.0 netmask 255.0.0.0 gw 60.205.191.179 dev eth1)
+    v=$(/sbin/route add -net "$i".0.0.0 netmask 255.0.0.0 gw 60.205.191.179 dev ens33)
     echo "$v"
 done
 

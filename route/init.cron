@@ -1,3 +1,2 @@
-00 00 * * * sh /home/admin/route/reboot.sh
-05 00 * * * sh /home/admin/nginx/spilt.sh
-
+0 1 * * * sh /www/wwwroot/mybjut.liboyan.cn/route/reboot.sh
+5 1 * * * sh /www/wwwroot/mybjut.liboyan.cn/nginx/spilt.sh
